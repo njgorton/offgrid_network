@@ -201,8 +201,8 @@ body {
       color: #E1E4D9; }
 
 .events {
-  background: linear-gradient(to right, rgba(242, 145, 48, 0.5), rgba(53, 53, 53, 0.5)), url(/public/img/events.png);
-  background-size: 100% 100%;
+  background: linear-gradient(to right, rgba(242, 145, 48, 0.4), rgba(242, 145, 48, 0.4)), url(/public/img/events.png);
+  background-repeat: repeat;
   padding-bottom: 10rem; }
   .events__heading-container {
     background-color: rgba(0, 0, 0, 0.7);
@@ -229,7 +229,7 @@ body {
     @media only screen and (max-width: 87.5em) {
       .events__content {
         padding: 3rem;
-        grid-gap: 3rem; } }
+        grid-column-gap: 3rem; } }
     @media only screen and (max-width: 62.5em) {
       .events__content {
         grid-template-columns: 1fr;
@@ -246,7 +246,7 @@ body {
     font-size: 2.2rem;
     padding: 1rem;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 5rem;
     transition: all .2s; }
     @media only screen and (max-width: 50em) {
       .events__btn {
@@ -281,7 +281,7 @@ body {
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.5);
   display: flex;
   border-radius: 2px;
-  cursor: pointer;
+  position: relative;
   max-width: 62rem;
   max-height: 25rem; }
   @media only screen and (max-width: 62.5em) {
@@ -291,9 +291,18 @@ body {
         display: none; }
       .events-card:nth-last-child(2) {
         display: none; } }
-  .events-card:hover {
-    -webkit-filter: blur(2px) brightness(0.7);
-    filter: blur(2px) brightness(0.7); }
+  .events-card:hover .events-card__img {
+    -webkit-filter: blur(2px) brightness(60%);
+    filter: blur(2px) brightness(60%); }
+  .events-card:hover .events-card__content {
+    -webkit-filter: blur(2px) brightness(60%);
+    filter: blur(2px) brightness(60%); }
+  .events-card:hover .events-card__btn {
+    opacity: 1;
+    transform: translateY(-10rem); }
+    @media only screen and (max-width: 31.25em) {
+      .events-card:hover .events-card__btn {
+        transform: translateY(-5rem); } }
   .events-card__img {
     flex: 1;
     width: 100%;
@@ -378,19 +387,51 @@ body {
       .events-card__text {
         display: none; } }
   .events-card__btn-container {
+    position: absolute;
     width: 100%;
-    display: none; }
+    height: 100%; }
   .events-card__btn:link, .events-card__btn:visited {
-    text-decoration: none;
-    color: #E59F71;
-    font-size: 1.7rem;
-    border-bottom: 1px solid #f29130;
-    padding: 5px; }
-    .events-card__btn:link:last-child, .events-card__btn:visited:last-child {
-      margin-left: 1rem; }
-  .events-card__btn:hover {
     background-color: #f29130;
-    color: #E1E4D9; }
+    color: #E1E4D9;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2.5rem;
+    padding: 10px;
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    bottom: 0;
+    left: 25%;
+    transition: all .2s ease-out; }
+    @media only screen and (max-width: 62.5em) {
+      .events-card__btn:link, .events-card__btn:visited {
+        left: 35%; } }
+    @media only screen and (max-width: 43.75em) {
+      .events-card__btn:link, .events-card__btn:visited {
+        left: 30%;
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .events-card__btn:link, .events-card__btn:visited {
+        left: 25%; } }
+    @media only screen and (max-width: 31.25em) {
+      .events-card__btn:link, .events-card__btn:visited {
+        left: 20%;
+        font-size: 2rem; } }
+    @media only screen and (max-width: 25em) {
+      .events-card__btn:link, .events-card__btn:visited {
+        left: 12%;
+        font-size: 1.8rem; } }
+    .events-card__btn:link:last-child, .events-card__btn:visited:last-child {
+      margin-left: 15rem; }
+      @media only screen and (max-width: 31.25em) {
+        .events-card__btn:link:last-child, .events-card__btn:visited:last-child {
+          margin-left: 12rem; } }
+      @media only screen and (max-width: 25em) {
+        .events-card__btn:link:last-child, .events-card__btn:visited:last-child {
+          margin-left: 11rem; } }
+  .events-card__btn:hover {
+    background-color: #c27426; }
 
 .community__heading {
   background-color: rgba(0, 0, 0, 0.7);
@@ -415,6 +456,9 @@ body {
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23f29130' fill-opacity='0.11' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   display: flex; }
+  @media only screen and (max-width: 50em) {
+    .community__content {
+      flex-direction: column; } }
 
 .community__left {
   padding-top: 9rem;
@@ -425,6 +469,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
   background-color: rgba(83, 155, 0, 0.7);
   flex: 0 0 50%; }
+  @media only screen and (max-width: 50em) {
+    .community__right {
+      -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); } }
 
 .forum {
   padding-bottom: 5rem; }
@@ -450,12 +498,34 @@ body {
     margin: 2rem;
     border-radius: 10px;
     box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.4); }
+    @media only screen and (max-width: 50em) {
+      .forum__post {
+        max-width: 80%;
+        margin: 3rem auto; } }
     .forum__post:nth-child(3) {
       transform: translateX(7rem); }
+      @media only screen and (max-width: 75em) {
+        .forum__post:nth-child(3) {
+          transform: translateX(5rem); } }
+      @media only screen and (max-width: 50em) {
+        .forum__post:nth-child(3) {
+          transform: none; } }
     .forum__post:nth-child(4) {
       transform: translateX(14rem); }
+      @media only screen and (max-width: 75em) {
+        .forum__post:nth-child(4) {
+          transform: translateX(10rem); } }
+      @media only screen and (max-width: 50em) {
+        .forum__post:nth-child(4) {
+          transform: none; } }
     .forum__post:nth-child(5) {
       transform: translateX(21rem); }
+      @media only screen and (max-width: 75em) {
+        .forum__post:nth-child(5) {
+          transform: translateX(15rem); } }
+      @media only screen and (max-width: 50em) {
+        .forum__post:nth-child(5) {
+          transform: none; } }
   .forum__post-title {
     font-size: 2rem;
     color: #E59F71;
@@ -499,6 +569,18 @@ body {
   height: 50rem;
   position: relative;
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 62.5em) {
+    .online {
+      width: 45rem;
+      height: 45rem; } }
+  @media only screen and (max-width: 50em) {
+    .online {
+      width: 40rem;
+      height: 40rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .online {
+      width: 35rem;
+      height: 35rem; } }
   .online__container {
     position: absolute;
     top: 55%;
@@ -507,6 +589,17 @@ body {
     border: 2px solid #86b94c;
     border-radius: 10px;
     padding: 2rem; }
+    @media only screen and (max-width: 62.5em) {
+      .online__container {
+        left: 40%;
+        transform: translate(-40% -55%); } }
+    @media only screen and (max-width: 50em) {
+      .online__container {
+        left: 35%;
+        transform: translate(-35% -55%); } }
+    @media only screen and (max-width: 37.5em) {
+      .online__container {
+        padding: 1rem; } }
   .online__user-count {
     font-size: 2rem;
     border-bottom: 1px solid currentColor;
@@ -526,12 +619,22 @@ body {
 .members {
   background-color: #353535;
   border-radius: 10px;
-  max-width: 35rem;
+  max-width: 30rem;
   float: right;
   padding: 2rem;
   margin-top: 10rem;
   margin-right: 5rem;
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 75em) {
+    .members {
+      margin-right: 3rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .members {
+      max-width: 26rem; } }
+  @media only screen and (max-width: 50em) {
+    .members {
+      max-width: 45rem;
+      margin: 5rem; } }
   .members__heading {
     color: #E59F71;
     font-size: 2rem; }
@@ -561,6 +664,9 @@ body {
     margin-left: 2rem;
     margin-right: 1rem;
     border-radius: 25%; }
+    @media only screen and (max-width: 62.5em) {
+      .members__img {
+        margin-left: 1rem; } }
   .members__top-100 {
     font-size: 1.6rem;
     color: #BA5A31;
