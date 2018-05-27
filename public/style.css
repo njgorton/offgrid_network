@@ -27,7 +27,7 @@ body {
   color: #E1E4D9; }
 
 .about {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/public/img/topo.png);
+  background-color: #BA5A31;
   color: #353535;
   padding: 7rem 5rem; }
   @media only screen and (max-width: 50em) {
@@ -35,10 +35,8 @@ body {
       display: none; } }
   .about__text {
     font-size: 2.1rem;
-    font-weight: 700;
     line-height: 1.5;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); }
+    text-align: center; }
 
 .news {
   background-image: url(/public/img/cropRows-large.jpg);
@@ -456,6 +454,7 @@ body {
 
 .community__content {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(/public/img/topo.png);
+  background-image: url(/public/img/topo-map.png);
   display: flex; }
   @media only screen and (max-width: 50em) {
     .community__content {
@@ -468,7 +467,7 @@ body {
 .community__right {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
-  background-color: rgba(107, 160, 56, 0.7);
+  background-color: rgba(83, 155, 0, 0.7);
   flex: 0 0 50%; }
   @media only screen and (max-width: 50em) {
     .community__right {
@@ -488,7 +487,7 @@ body {
       transform: scale(1.3) skewY(5deg); }
     .forum__heading h3 {
       font-size: 2.5rem;
-      color: #c27426; }
+      color: #f29130; }
     .forum__heading h4 {
       font-size: 1.6rem;
       color: #BA5A31;
@@ -588,7 +587,7 @@ body {
     top: 55%;
     left: 50%;
     transform: translate(-50% -55%);
-    border: 2px solid #78A555;
+    border: 2px solid #86B94C;
     border-radius: 10px;
     padding: 2rem; }
     @media only screen and (max-width: 62.5em) {
@@ -892,16 +891,37 @@ body {
   z-index: 1000;
   background-color: #353535;
   color: #f29130;
+  max-width: 1800px;
+  padding-top: 1rem;
   display: grid;
+  justify-content: space-between;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3rem;
-  justify-content: space-between;
-  padding-top: 1rem; }
+  grid-template-areas: "search profile" "list list"; }
+  @media only screen and (max-width: 50em) {
+    .navigation {
+      justify-content: start;
+      grid-gap: 1rem;
+      padding-bottom: .5rem;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "search ." "profile ."  "list list"; } }
   .navigation__search {
-    grid-column: 1 / 2;
+    grid-area: search;
     width: 25%;
     margin-left: 2rem;
     position: relative; }
+    @media only screen and (max-width: 87.5em) {
+      .navigation__search {
+        width: 30%; } }
+    @media only screen and (max-width: 62.5em) {
+      .navigation__search {
+        width: 35%; } }
+    @media only screen and (max-width: 50em) {
+      .navigation__search {
+        min-width: calc(20rem - 5px); } }
+    @media only screen and (max-width: 31.25em) {
+      .navigation__search {
+        margin-left: 1rem; } }
     .navigation__search .search-text {
       float: left;
       width: 100%;
@@ -924,17 +944,26 @@ body {
       cursor: pointer;
       font-size: 2rem; }
   .navigation__user-profile {
-    grid-column: 2 / -1;
+    grid-area: profile;
     justify-self: end;
     display: flex;
-    align-content: center;
+    align-items: center;
     font-size: 1.5rem;
     margin-right: 2rem; }
+    @media only screen and (max-width: 50em) {
+      .navigation__user-profile {
+        justify-self: start;
+        min-width: 25rem;
+        margin-right: 0;
+        margin-left: 2rem;
+        padding: 2px 0; } }
+    @media only screen and (max-width: 31.25em) {
+      .navigation__user-profile {
+        margin-left: 1rem; } }
     .navigation__user-profile .user-text {
       color: #E59F71; }
     .navigation__user-profile .user-name {
       margin: 0 1rem;
-      margin-bottom: 1rem;
       color: #E1E4D9;
       border-bottom: 1px solid #f29130;
       cursor: pointer; }
@@ -944,28 +973,51 @@ body {
     .navigation__user-profile .user-img {
       width: 100%;
       max-width: 3rem;
+      max-height: 3rem;
       border-radius: 25%;
       cursor: pointer; }
     .navigation__user-profile .icon-menu {
       width: 3rem;
-      height: 100%;
+      height: 3rem;
       margin-left: 1rem;
       border: 1px solid #E59F71;
       border-radius: 5px; }
+  .navigation__mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #353535;
+    height: 7rem;
+    width: 7rem; }
+    @media only screen and (max-width: 50em) {
+      .navigation__mobile {
+        display: block; } }
   .navigation__list {
-    grid-column: 1 / -1;
-    display: flex;
+    grid-area: list;
     justify-content: space-around;
     font-size: 3rem;
     font-family: "Cabin Sketch", cursive;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
-    list-style: none; }
+    list-style: none;
+    display: none; }
+    @media only screen and (min-width: 50em) {
+      .navigation__list {
+        display: flex !important; } }
+    @media only screen and (max-width: 50em) {
+      .navigation__list {
+        width: 25%;
+        font-size: 4rem;
+        margin: 1rem auto; } }
   .navigation__item {
     padding: 0 .5rem;
     cursor: pointer;
     display: inline-block;
     transition: all .2s ease-out; }
+    @media only screen and (max-width: 50em) {
+      .navigation__item {
+        margin: 1rem 0; } }
     .navigation__item:hover {
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
       transform: rotate(-5deg) scale(1.2); }
@@ -975,3 +1027,38 @@ body {
   .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
     color: #f29130; }
+
+#nav-toggle {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  cursor: pointer;
+  padding: 2rem;
+  padding-left: 0; }
+  #nav-toggle span,
+  #nav-toggle span::before,
+  #nav-toggle span::after {
+    height: 2px;
+    width: 4rem;
+    background: #f29130;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: transform .3s ease-in-out, hover .3s ease; }
+  #nav-toggle span::before {
+    top: -1rem; }
+  #nav-toggle span::after {
+    bottom: -1rem; }
+  #nav-toggle:hover span::before {
+    top: -1.2rem; }
+  #nav-toggle:hover span::after {
+    top: 1.2rem; }
+  #nav-toggle.active span {
+    background-color: transparent; }
+    #nav-toggle.active span::before, #nav-toggle.active span::after {
+      top: 0;
+      height: 2px; }
+    #nav-toggle.active span::before {
+      transform: rotate(135deg); }
+    #nav-toggle.active span::after {
+      transform: rotate(-135deg); }
