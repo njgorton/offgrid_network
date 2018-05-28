@@ -981,7 +981,8 @@ body {
       height: 3rem;
       margin-left: 1rem;
       border: 1px solid #E59F71;
-      border-radius: 5px; }
+      border-radius: 5px;
+      cursor: pointer; }
   .navigation__mobile {
     display: none;
     position: absolute;
