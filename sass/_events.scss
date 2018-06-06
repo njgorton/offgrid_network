@@ -106,7 +106,7 @@
     display: flex;
     border-radius: 2px;
     position: relative; // for buttons
-    max-width: 62rem;
+    max-width: 62rem; 
     max-height: 25rem;
     
     @media only screen and (max-width: $bp-medium-large) {
@@ -133,7 +133,7 @@
 
     &:hover .events-card__btn {
         opacity: 1;
-        transform: translateY(-10rem);
+        transform: translateY(-10rem);    
 
         @media only screen and (max-width: $bp-smaller) {
             transform: translateY(-5rem);
@@ -141,7 +141,6 @@
     }
 
     &__img {
-        flex: 1;
         width: 100%;
         max-width: 25rem;
         max-height: 25rem;

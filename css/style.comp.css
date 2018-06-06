@@ -386,6 +386,7 @@ body {
       .events-card:hover .events-card__btn {
         transform: translateY(-5rem); } }
   .events-card__img {
+    flex: 1;
     width: 100%;
     max-width: 25rem;
     max-height: 25rem; }
