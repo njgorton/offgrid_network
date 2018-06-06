@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server --browser=firefox",
+    "devserver": "live-server --browser=chrome",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
@@ -25,8 +25,6 @@
   "dependencies": {
     "autoprefixer": "^8.2.0",
     "concat": "^1.0.3",
-    "ejs": "^2.5.8",
-    "flickity": "^2.1.1",
     "module": "0.0.x",
     "node-sass": "^4.8.3",
     "npm-run-all": "^4.1.2",
