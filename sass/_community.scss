@@ -41,7 +41,7 @@
     &__right {
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
-        background-color: rgba($color-green-dark, .7);
+        background-color: rgba($color-green, .7);
         flex:  0 0 50%;
 
         @media only screen and (max-width: $bp-medium) {
@@ -302,7 +302,8 @@
         cursor: pointer;
         display: flex;
         
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-white-dark;
             text-decoration: underline;
         }
@@ -330,7 +331,8 @@
         float: right;
         margin-top: 1rem;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-white-dark;
             text-decoration: underline;
         }

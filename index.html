@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
-        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Lato:400,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-        <link rel="stylesheet" href="css/style.css">  
-        
-        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-
-        <title>The Offgrid Network</title>
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/style.css">  
+    
+    <title>The Offgrid Network</title>
+</head>
+<body>
 
 
 <!-- ============================HEADER================================ -->
@@ -34,9 +32,12 @@
         
         <div class="navigation__user-profile">
             <p class="user-text">Logged in as:</p>
-            <p class="user-name">njgorton</p>
-            <img src="img/user-img.jpg" alt="User's profile Image" class="user-img">                                  
-            <i class="fas fa-caret-square-down icon-menu"></i>                                                     
+            <p class="user-name" tabindex="0">njgorton</p>
+            <img src="img/user-img.jpg" alt="User's profile Image" class="user-img" tabindex="0">
+            <div class="user-menu">                                  
+                <i class="fas fa-caret-square-down user-menuIcon" tabindex="0"></i>
+                <span class="user-menuBadge">2</span>   
+            </div>                                                  
         </div>
     
         <div class="navigation__mobile">
@@ -55,318 +56,320 @@
 
 
 <!-- ============================ABOUT================================= -->
-    <section class="about">
-        <p class="about__text">
-            Here at the <em>Off-Grid Network</em>, we believe that living off the grid doesn’t have to mean going it alone. From the know-how of past generations to new innovations, we aim to provide a network for homesteaders to share and learn from each other through the vast knowledge, experience, and traditions of self-sufficiency and independence, shared by a community of folks who love living free and unfettered in our modern world.
-        </p>
-    </section>
+    <main>
+        <article class="about">
+            <p class="about__text">
+                Here at the <em>Off-Grid Network</em>, we believe that living off the grid doesn’t have to mean going it alone. From the know-how of past generations to new innovations, we aim to provide a network for homesteaders to share and learn from each other through the vast knowledge, experience, and traditions of self-sufficiency and independence, shared by a community of folks who love living free and unfettered in our modern world.
+            </p>
+        </article>
 
 
 <!-- ============================NEWS================================== -->
-    <section class="news">
-        <div class="news__heading-container">
-            <h2 class="news__heading">News</h2>
-        </div>
-
-        <div class="news__content" data-flickity='{ "freeScroll": "true", "wrapAround": "true" }'>
-            <div class="news-card">            
-                <img src="img/fenced-chickens.jpg" alt="Chickens behind a fence." class="news-card__img">
-
-                <div class="news-card__content">
-                    <div class="news-card__heading">                
-                        <h3>Cage-Free vs Pastured: What's the Difference, Really?</h3>
-                    </div>
-            
-                    <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
-        
-                    <a href="#" class="news-card__btn">Read Article &rarr;</a>
-                </div>           
+        <section class="news">
+            <div class="news__heading-container">
+                <h2 class="news__heading">News</h2>
             </div>
-        
-            <div class="news-card">
-                <img src="img/solar-panels.jpg" alt="Solar panels next to a vegetable garden." class="news-card__img">
 
-                <div class="news-card__content">
-                    <div class="news-card__heading">
-                        <h3>Yes, the New Solar Tech IS Worth that Hefty Price-tag!</h3>
-                    </div>
+            <div class="news__content" data-flickity='{ "freeScroll": "true", "wrapAround": "true" }'>
+                <div class="news-card">            
+                    <img src="img/fenced-chickens.jpg" alt="Chickens behind a fence." class="news-card__img">
+
+                    <div class="news-card__content">
+                        <div class="news-card__heading">                
+                            <h3>Cage-Free vs Pastured: What's the Difference, Really?</h3>
+                        </div>
+                
+                        <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
             
-                    <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
-        
-                    <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                        <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                    </div>           
+                </div>
+            
+                <div class="news-card">
+                    <img src="img/solar-panels.jpg" alt="Solar panels next to a vegetable garden." class="news-card__img">
+
+                    <div class="news-card__content">
+                        <div class="news-card__heading">
+                            <h3>Yes, the New Solar Tech IS Worth that Hefty Price-tag!</h3>
+                        </div>
+                
+                        <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
+            
+                        <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                    </div>
+                </div>
+            
+                <div class="news-card">
+                    <img src="img/milking-goat.jpg" alt="Person milking a goat on a milking stand." class="news-card__img">
+
+                    <div class="news-card__content">
+                        <div class="news-card__heading">
+                            <h3>FDA is Milking Every Last Drop from Goat Dairy Farmers</h3>
+                        </div>
+                
+                        <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
+            
+                        <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="news-card">        
+                    <img src="img/tiny-home.jpg" alt="Tiny home made from old trailer container." class="news-card__img">
+
+                    <div class="news-card__content">
+                        <div class="news-card__heading">
+                            <h3>Tiny Homes: Pre-Fab or DIY, Which is Really Cheaper?</h3>
+                        </div>
+                
+                        <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
+            
+                        <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="news-card">
+                    <img src="img/well-pump.jpg" alt="Hand powered well pump." class="news-card__img">
+
+                    <div class="news-card__content">
+                        <div class="news-card__heading">
+                            <h3>How Clean is Your Well Water?</h3>
+                        </div>
+                
+                        <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
+            
+                        <a href="#" class="news-card__btn">Read Article &rarr;</a>
+                    </div>
                 </div>
             </div>
-        
-            <div class="news-card">
-                <img src="img/milking-goat.jpg" alt="Person milking a goat on a milking stand." class="news-card__img">
-
-                <div class="news-card__content">
-                    <div class="news-card__heading">
-                        <h3>FDA is Milking Every Last Drop from Goat Dairy Farmers</h3>
-                    </div>
             
-                    <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
-        
-                    <a href="#" class="news-card__btn">Read Article &rarr;</a>
-                </div>
-            </div>
-
-            <div class="news-card">        
-                <img src="img/tiny-home.jpg" alt="Tiny home made from old trailer container." class="news-card__img">
-
-                <div class="news-card__content">
-                    <div class="news-card__heading">
-                        <h3>Tiny Homes: Pre-Fab or DIY, Which is Really Cheaper?</h3>
-                    </div>
-            
-                    <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
-        
-                    <a href="#" class="news-card__btn">Read Article &rarr;</a>
-                </div>
-            </div>
-
-            <div class="news-card">
-                <img src="img/well-pump.jpg" alt="Hand powered well pump." class="news-card__img">
-
-                <div class="news-card__content">
-                    <div class="news-card__heading">
-                        <h3>How Clean is Your Well Water?</h3>
-                    </div>
-            
-                    <p class="news-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quam blanditiis aut esse aliquam iure...</p>
-        
-                    <a href="#" class="news-card__btn">Read Article &rarr;</a>
-                </div>
-            </div>
-        </div>
-        
-        <button class="news__btn">See More News</button>
-    </section>
+            <button class="news__btn">See More News</button>
+        </section>
 
 
 <!-- ===========================EVENTS================================= -->
-    <section class="events">
-        <div class="events__heading-container">
-            <h2 class="events__heading">Upcoming Events</h2>
-        </div>
+        <section class="events">
+            <div class="events__heading-container">
+                <h2 class="events__heading">Upcoming Events</h2>
+            </div>
 
-        <div class="events__content">
-            <div class="events-card" tabindex="0" role="button" aria-pressed="false">
-                <img src="img/greenhouse.jpg" alt="Picture of a greenhouse surrounded by a garden." class="events-card__img">
+            <div class="events__content">
+                <div class="events-card" tabindex="0">
+                    <img src="img/greenhouse.jpg" alt="Picture of a greenhouse surrounded by a garden." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>Sept 2nd, 2018 | Online Workshop, 6pm-8pm EST</h4>
+                            <h3>Greenhouses: Food All Winter!</h3>
+                        </div>
                 
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>Sept 2nd, 2018 | Online Workshop, 6pm-8pm EST</h4>
-                        <h3>Greenhouses: Food All Winter!</h3>
+                        <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minima suscipit quos magni nulla officia.</p>   
                     </div>
-            
-                    <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque minima suscipit quos magni nulla officia.</p>   
+                    
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div>
                 </div>
+
+                <div class="events-card" tabindex="0">
+                    <img src="img/caterpillar.jpg" alt="Close-up of a caterpillar on garden plant." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>May 10th-15th, 2018 | Tuscaloosa, Alabama</h4>
+                            <h3>Organic Pest Management</h3>
+                        </div>
                 
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
+                        <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt voluptate ea explicabo cupiditate repellendus?</p>  
+                    </div>
+
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div> 
+                </div>
+
+                <div class="events-card" tabindex="0">
+                    <img src="img/canning.jpg" alt="Preserved fruits in jars." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>Aug 20th, 2018 | Online Workshop, 6pm-8pm EST</h4>
+                            <h3>Preserving and Canning</h3>
+                        </div>
+                
+                        <p class="events-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore modi praesentium quas, dolorem hic.</p>  
+                    </div>
+
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div> 
+                </div>
+
+                <div class="events-card" tabindex="0">
+                    <img src="img/cattle.jpg" alt="Cattle on eroded river bank." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>Nov 17th, 2018 | Online Workshop, 6pm-8pm EST</h4>
+                            <h3>Livestock and Land Management</h3>
+                        </div>
+                
+                        <p class="events-card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis mollitia beatae nobis facilis, suscipit dolore!</p>  
+                    </div>
+
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div> 
+                </div>
+
+                <div class="events-card" tabindex="0">
+                    <img src="img/voltmeter.jpg" alt="Picture of an old voltmeter." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>July 22nd-27th, 2018 | Billings, Missouri</h4>
+                            <h3>Off-Grid Electrical Systems</h3>
+                        </div>
+                
+                        <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestiae hic tempore facere cumque sed?.</p> 
+                    </div>
+
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="events-card" tabindex="0">
+                    <img src="img/bees.jpg" alt="Close-up of arms tending to a beehive." class="events-card__img">
+                    
+                    <div class="events-card__content">
+                        <div class="events-card__heading">
+                            <h4>Oct 11th, 2018 | Online Workshop, 6pm-8pm EST</h4>
+                            <h3>Beekeeping 101</h3>
+                        </div>
+                
+                        <p class="events-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam ab accusantium vitae cumque natus!</p>   
+                    </div>  
+
+                    <div class="events-card__btn-container">
+                        <a href="#" class="events-card__btn">Sign Up!</a>
+                        <a href="#" class="events-card__btn">See Details &rarr;</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="events-card" tabindex="0" role="button">
-                <img src="img/caterpillar.jpg" alt="Close-up of a caterpillar on garden plant." class="events-card__img">
-                
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>May 10th-15th, 2018 | Tuscaloosa, Alabama</h4>
-                        <h3>Organic Pest Management</h3>
-                    </div>
-            
-                    <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sunt voluptate ea explicabo cupiditate repellendus?</p>  
-                </div>
-
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
-                </div> 
-            </div>
-
-            <div class="events-card" tabindex="0" role="button">
-                <img src="img/canning.jpg" alt="Preserved fruits in jars." class="events-card__img">
-                
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>Aug 20th, 2018 | Online Workshop, 6pm-8pm EST</h4>
-                        <h3>Preserving and Canning</h3>
-                    </div>
-            
-                    <p class="events-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur tempore modi praesentium quas, dolorem hic.</p>  
-                </div>
-
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
-                </div> 
-            </div>
-
-            <div class="events-card" tabindex="0" role="button">
-                <img src="img/cattle.jpg" alt="Cattle on eroded river bank." class="events-card__img">
-                
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>Nov 17th, 2018 | Online Workshop, 6pm-8pm EST</h4>
-                        <h3>Livestock and Land Management</h3>
-                    </div>
-            
-                    <p class="events-card__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis mollitia beatae nobis facilis, suscipit dolore!</p>  
-                </div>
-
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
-                </div> 
-            </div>
-
-            <div class="events-card" tabindex="0" role="button">
-                <img src="img/voltmeter.jpg" alt="Picture of an old voltmeter." class="events-card__img">
-                
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>July 22nd-27th, 2018 | Billings, Missouri</h4>
-                        <h3>Off-Grid Electrical Systems</h3>
-                    </div>
-            
-                    <p class="events-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut molestiae hic tempore facere cumque sed?.</p> 
-                </div>
-
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
-                </div>
-            </div>
-
-            <div class="events-card" tabindex="0" role="button">
-                <img src="img/bees.jpg" alt="Close-up of arms tending to a beehive." class="events-card__img">
-                
-                <div class="events-card__content">
-                    <div class="events-card__heading">
-                        <h4>Oct 11th, 2018 | Online Workshop, 6pm-8pm EST</h4>
-                        <h3>Beekeeping 101</h3>
-                    </div>
-            
-                    <p class="events-card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, quisquam ab accusantium vitae cumque natus!</p>   
-                </div>  
-
-                <div class="events-card__btn-container">
-                    <a href="#" class="events-card__btn">Sign Up!</a>
-                    <a href="#" class="events-card__btn">See Details &rarr;</a>
-                </div>
-            </div>
-        </div>
-
-        <button class="events__btn">See Full Schedule!</button>
-    </section>
+            <button class="events__btn">See Full Schedule!</button>
+        </section>
 
 
 <!-- ==========================COMMUNITY=============================== -->
-    <section class="community">
-        <div class="community__heading">
-            <h2>Community</h2>
-        </div>
-
-        <div class="community__content">
-            <div class="community__left">
-                <div class="forum">
-                    <div class="forum__heading">
-                        <h3>OGN FORUM/</h3>
-                        <h4>TRENDING POSTS</h4>
-                    </div>                              
-
-                    <div class="forum__post">
-                        <h5 class="forum__post-title">Better chicken coop predator protection ideas?? I'm at my wit's end!!!</h5>
-                        <h6 class="forum__post-details">posted 8 days ago by: <img src="img/user-default.jpg" alt="User Image" class="forum__user-img"><span>barnOwl_56</span></h6>
-                        <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore laboriosam maxime. Ipsam aliquam fugit fugiat minus et, amet nostrum? Consequatur modi, ad labore nulla beatae autem. Quia, voluptatum officia...</p>
-                    </div>
-
-                    <div class="forum__post">
-                        <h5 class="forum__post-title">Help me pick a new tractor!</h5>
-                        <h6 class="forum__post-details">posted 2 days ago by: <img src="img/user-9.jpg" alt="User Image" class="forum__user-img"><span>buckshot</span></h6>
-                        <p class="forum__post-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum doloribus assumenda non necessitatibus perferendis vitae quisquam velit dolorum rerum, laborum ducimus accusamus quos, temporibus optio??</p>
-                    </div>
-
-                    <div class="forum__post">
-                        <h5 class="forum__post-title">Is my land better suited for solar or hydro power?</h5>
-                        <h6 class="forum__post-details">posted 5 days ago by: <img src="img/user-default.jpg" alt="User Image" class="forum__user-img"><span>city2farm</span></h6>
-                        <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis qui officiis natus consectetur repudiandae vel harum ad hic enim cum. Expedita soluta ex esse sed consequatur non ullam porro officiis...</p>
-                    </div>
-
-                    <div class="forum__post">
-                        <h5 class="forum__post-title">County zoning regs are impossible! How to fight "the man"?</h5>
-                        <h6 class="forum__post-details">posted yesterday by: <img src="img/user-1.jpg" alt="User Image" class="forum__user-img"><span>LeeroyJenkins2.0</span></h6>
-                        <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit nesciunt est ipsum corporis. Vitae laudantium, velit cum nesciunt rerum voluptatum? Eligendi obcaecati, tenetur cum labore nihil saepe!</p>
-                    </div>
-                </div>       
+        <section class="community">
+            <div class="community__heading">
+                <h2>Community</h2>
             </div>
 
-            <div class="community__right">    
-                <div class="online">
-                    <div class="online__container">
-                        <h3 class="online__user-count">Users online: 2,768</h3>
-                        <h4 class="online__member-count">1,836 members</h4>
-                        <h4 class="online__guest-count">932 guests</h4>
-                    </div>                
+            <div class="community__content">
+                <div class="community__left">
+                    <div class="forum">
+                        <div class="forum__heading" tabindex="0">
+                            <h3>OGN FORUM/</h3>
+                            <h4>TRENDING POSTS</h4>
+                        </div>                              
+
+                        <div class="forum__post">
+                            <h5 class="forum__post-title" tabindex="0">Better chicken coop predator protection ideas?? I'm at my wit's end!!!</h5>
+                            <h6 class="forum__post-details">posted 8 days ago by: <img src="img/user-default.jpg" alt="User Image" class="forum__user-img"><span tabindex="0">barnOwl_56</span></h6>
+                            <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam inventore laboriosam maxime. Ipsam aliquam fugit fugiat minus et, amet nostrum? Consequatur modi, ad labore nulla beatae autem. Quia, voluptatum officia...</p>
+                        </div>
+
+                        <div class="forum__post">
+                            <h5 class="forum__post-title" tabindex="0">Help me pick a new tractor!</h5>
+                            <h6 class="forum__post-details">posted 2 days ago by: <img src="img/user-9.jpg" alt="User Image" class="forum__user-img"><span tabindex="0">buckshot</span></h6>
+                            <p class="forum__post-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum doloribus assumenda non necessitatibus perferendis vitae quisquam velit dolorum rerum, laborum ducimus accusamus quos, temporibus optio??</p>
+                        </div>
+
+                        <div class="forum__post">
+                            <h5 class="forum__post-title" tabindex="0">Is my land better suited for solar or hydro power?</h5>
+                            <h6 class="forum__post-details">posted 5 days ago by: <img src="img/user-default.jpg" alt="User Image" class="forum__user-img"><span tabindex="0">city2farm</span></h6>
+                            <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis qui officiis natus consectetur repudiandae vel harum ad hic enim cum. Expedita soluta ex esse sed consequatur non ullam porro officiis...</p>
+                        </div>
+
+                        <div class="forum__post">
+                            <h5 class="forum__post-title" tabindex="0">County zoning regs are impossible! How to fight "the man"?</h5>
+                            <h6 class="forum__post-details">posted yesterday by: <img src="img/user-1.jpg" alt="User Image" class="forum__user-img"><span tabindex="0">LeeroyJenkinz</span></h6>
+                            <p class="forum__post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos reprehenderit nesciunt est ipsum corporis. Vitae laudantium, velit cum nesciunt rerum voluptatum? Eligendi obcaecati, tenetur cum labore nihil saepe!</p>
+                        </div>
+                    </div>       
                 </div>
 
-                <div class="members">
-                    <h3 class="members__heading">Top Contributing Users</h3>
-                    <p class="members__updated">Updated: 58 minutes ago, restarts in 5 days 8 hours...</p>
+                <div class="community__right">    
+                    <div class="online">
+                        <div class="online__container">
+                            <h3 class="online__user-count" tabindex="0">Users online: 2,768</h3>
+                            <h4 class="online__member-count">1,836 members</h4>
+                            <h4 class="online__guest-count">932 guests</h4>
+                        </div>                
+                    </div>
 
-                    <ul class="members__list">
-                        <li class="members__user">1. <img src="img/user-1.jpg" alt="User Image" class="members__img"> LeeroyJenkins2.0 <span>206</span></li>
+                    <div class="members">
+                        <h3 class="members__heading">Top Contributing Users</h3>
+                        <p class="members__updated">Updated: 58 minutes ago, restarts in 5 days 8 hours...</p>
 
-                        <li class="members__user">2. <img src="img/user-2.jpg" alt="User Image" class="members__img"> whisky_n_powder <span>183</span></li>
+                        <ul class="members__list">
+                            <li class="members__user" tabindex="0">1. <img src="img/user-1.jpg" alt="User Image" class="members__img"> LeeroyJenkinz <span>206</span></li>
 
-                        <li class="members__user">3. <img src="img/user-3.jpg" alt="User Image" class="members__img"> oldcatlady <span>179</span></li>
+                            <li class="members__user" tabindex="0">2. <img src="img/user-2.jpg" alt="User Image" class="members__img"> whisky_n_powder <span>183</span></li>
 
-                        <li class="members__user">4. <img src="img/user-4.jpg" alt="User Image" class="members__img"> TriggerWarning <span>142</span></li>
+                            <li class="members__user" tabindex="0">3. <img src="img/user-3.jpg" alt="User Image" class="members__img"> oldcatlady <span>179</span></li>
 
-                        <li class="members__user">5. <img src="img/user-5.jpg" alt="User Image" class="members__img"> deere_green69 <span>137</span></li>
+                            <li class="members__user" tabindex="0">4. <img src="img/user-4.jpg" alt="User Image" class="members__img"> TriggerWarning <span>142</span></li>
 
-                        <li class="members__user">6. <img src="img/user-6.jpg" alt="User Image" class="members__img"> crazyJoe <span>111</span></li>
+                            <li class="members__user" tabindex="0">5. <img src="img/user-5.jpg" alt="User Image" class="members__img"> deere_green69 <span>137</span></li>
 
-                        <li class="members__user">7. <img src="img/user-default.jpg" alt="User Image" class="members__img"> shroomguy83 <span>109</span></li>
+                            <li class="members__user" tabindex="0">6. <img src="img/user-6.jpg" alt="User Image" class="members__img"> crazyJoe <span>111</span></li>
 
-                        <li class="members__user">8. <img src="img/user-7.jpg" alt="User Image" class="members__img"> moldy_pickle <span>88</span></li>
+                            <li class="members__user" tabindex="0">7. <img src="img/user-default.jpg" alt="User Image" class="members__img"> shroomguy83 <span>109</span></li>
 
-                        <li class="members__user">9. <img src="img/user-default.jpg" alt="User Image" class="members__img"> city2farm <span>81</span></li>
+                            <li class="members__user" tabindex="0">8. <img src="img/user-7.jpg" alt="User Image" class="members__img"> moldy_pickle <span>88</span></li>
 
-                        <li class="members__user">10. <img src="img/user-8.jpg" alt="User Image" class="members__img"> njgorton <span>75</span></li>
-                    </ul>
+                            <li class="members__user" tabindex="0">9. <img src="img/user-default.jpg" alt="User Image" class="members__img"> city2farm <span>81</span></li>
 
-                    <p class="members__top-100">Top 100 Users</p>
+                            <li class="members__user" tabindex="0">10. <img src="img/user-8.jpg" alt="User Image" class="members__img"> njgorton <span>75</span></li>
+                        </ul>
+
+                        <p class="members__top-100" tabindex="0">Top 100 Users</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
 <!-- ===========================FOOTER================================= -->
     <footer class="footer">            
         <ul class="footer__list">
-            <li class="footer__item">Site Rules</li>
-            <li class="footer__item">Terms</li>
-            <li class="footer__item">Privacy</li>
-            <li class="footer__item">Support</li>
-            <li class="footer__item">Contact</li>
+            <li class="footer__item" tabindex="0">Site Rules</li>
+            <li class="footer__item" tabindex="0">Terms</li>
+            <li class="footer__item" tabindex="0">Privacy</li>
+            <li class="footer__item" tabindex="0">Support</li>
+            <li class="footer__item" tabindex="0">Contact</li>
         </ul>
 
         <div class="footer__right">                
             <p class="footer__callout">Follow Us!</p>
 
             <div class="footer__icons">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/></svg>
+                <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/></svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
+                <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/></svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M457.6 224l-2.1-8.9H262V297h115.6c-12 57-67.7 87-113.2 87-33.1 0-68-13.9-91.1-36.3-23.7-23-38.8-56.9-38.8-91.8 0-34.5 15.5-69 38.1-91.7 22.5-22.6 56.6-35.4 90.5-35.4 38.8 0 66.6 20.6 77 30l58.2-57.9c-17.1-15-64-52.8-137.1-52.8-56.4 0-110.5 21.6-150 61C72.2 147.9 52 204 52 256s19.1 105.4 56.9 144.5c40.4 41.7 97.6 63.5 156.5 63.5 53.6 0 104.4-21 140.6-59.1 35.6-37.5 54-89.4 54-143.8 0-22.9-2.3-36.5-2.4-37.1z"/></svg>
+                <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M318.2 230.9l-1.6-7H160V288h90.7c-9.4 45-48.4 63.6-84.1 63.6-26 0-50.2-7.8-68.3-25.3-18.6-18.1-28.9-43.1-28.9-70.4 0-27.1 9.8-51.8 27.6-69.6 17.7-17.7 42-25.4 68.7-25.4 30.5 0 49.9 13.8 58.1 21.1l48-47.7C258.3 122.6 221.5 93 164.1 93c-44.3 0-86.7 16.8-117.7 47.8C15.9 171.3 0 215.2 0 256s15 82.6 44.6 113.3C76.3 402 121.2 419 167.5 419c42.1 0 81.9-16.5 110.3-46.3 28-29.4 42.4-70.1 42.4-112.7-.1-18-1.9-28.7-2-29.1zM512 224h-57v-57h-41v57h-57v41h57v57h41v-57h57z"/></svg>
 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 132.3 32 256c0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48 20.1 5.9 41.4 9.2 63.5 9.2 123.7 0 224-100.3 224-224C480 132.3 379.7 32 256 32z"/></svg>
+                <svg tabindex="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 32C132.3 32 32 132.3 32 256c0 91.7 55.2 170.5 134.1 205.2-.6-15.6-.1-34.4 3.9-51.4 4.3-18.2 28.8-122.1 28.8-122.1s-7.2-14.3-7.2-35.4c0-33.2 19.2-58 43.2-58 20.4 0 30.2 15.3 30.2 33.6 0 20.5-13.1 51.1-19.8 79.5-5.6 23.8 11.9 43.1 35.4 43.1 42.4 0 71-54.5 71-119.1 0-49.1-33.1-85.8-93.2-85.8-67.9 0-110.3 50.7-110.3 107.3 0 19.5 5.8 33.3 14.8 43.9 4.1 4.9 4.7 6.9 3.2 12.5-1.1 4.1-3.5 14-4.6 18-1.5 5.7-6.1 7.7-11.2 5.6-31.3-12.8-45.9-47-45.9-85.6 0-63.6 53.7-139.9 160.1-139.9 85.5 0 141.8 61.9 141.8 128.3 0 87.9-48.9 153.5-120.9 153.5-24.2 0-46.9-13.1-54.7-27.9 0 0-13 51.6-15.8 61.6-4.7 17.3-14 34.5-22.5 48 20.1 5.9 41.4 9.2 63.5 9.2 123.7 0 224-100.3 224-224C480 132.3 379.7 32 256 32z"/></svg>
             </div>             
            
             <p class="footer__text">This is a personal project designed and built by Nathaniel Gorton. You can see the repository for this project and others, on Github @
@@ -384,6 +387,7 @@
 
 <!-- ===========================SCRIPTS================================ -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="app.js"></script>
 </body>

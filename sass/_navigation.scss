@@ -102,7 +102,8 @@
             border-bottom: 1px solid $color-orange;
             cursor: pointer;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: $color-orange;
                 border-bottom: 1px solid $color-white-dark;
             }
@@ -115,15 +116,34 @@
             border-radius: 25%;
             cursor: pointer;    
         }
+
+        .user-menu {
+            position: relative;
+            //overflow: visible;
+        }
       
-        .icon-menu {
+        .user-menuIcon {
             width: 3rem;
             height: 3rem;
             margin-left: 1rem;
             border: 1px solid $color-tan;
             border-radius: 5px;
             cursor: pointer; 
-        }                
+        } 
+        
+        .user-menuBadge {
+            position: absolute;
+            top: -7px;
+            right: -7px;
+            display: inline-block;
+            text-align: center;
+            min-width: 20px;
+            min-height: 20px;
+            border-radius: 50%;
+            background-color: $color-brown;
+            color: $color-white-dark;
+            cursor: pointer;
+        }
     }
 
     &__mobile {
