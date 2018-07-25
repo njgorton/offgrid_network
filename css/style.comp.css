@@ -260,7 +260,7 @@ body {
     margin: .5rem 0;
     cursor: pointer;
     display: flex; }
-    .members__user:hover {
+    .members__user:hover, .members__user:focus {
       color: #E1E4D9;
       text-decoration: underline; }
     .members__user span {
@@ -278,7 +278,7 @@ body {
     cursor: pointer;
     float: right;
     margin-top: 1rem; }
-    .members__top-100:hover {
+    .members__top-100:hover, .members__top-100:focus {
       color: #E1E4D9;
       text-decoration: underline; }
 
@@ -386,7 +386,6 @@ body {
       .events-card:hover .events-card__btn {
         transform: translateY(-5rem); } }
   .events-card__img {
-    flex: 1;
     width: 100%;
     max-width: 25rem;
     max-height: 25rem; }
@@ -512,8 +511,14 @@ body {
       @media only screen and (max-width: 25em) {
         .events-card__btn:link:last-child, .events-card__btn:visited:last-child {
           margin-left: 11rem; } }
-  .events-card__btn:hover {
+  .events-card__btn:hover, .events-card__btn:focus {
     background-color: #c27426; }
+  .events-card__btn:focus {
+    opacity: 1;
+    transform: translateY(-10rem); }
+    @media only screen and (max-width: 31.25em) {
+      .events-card__btn:focus {
+        transform: translateY(-5rem); } }
 
 .footer {
   background-color: #353535;
@@ -806,7 +811,7 @@ body {
       color: #E1E4D9;
       border-bottom: 1px solid #f29130;
       cursor: pointer; }
-      .navigation__user-profile .user-name:hover {
+      .navigation__user-profile .user-name:hover, .navigation__user-profile .user-name:focus {
         color: #f29130;
         border-bottom: 1px solid #E1E4D9; }
     .navigation__user-profile .user-img {
@@ -815,12 +820,26 @@ body {
       max-height: 3rem;
       border-radius: 25%;
       cursor: pointer; }
-    .navigation__user-profile .icon-menu {
+    .navigation__user-profile .user-menu {
+      position: relative; }
+    .navigation__user-profile .user-menuIcon {
       width: 3rem;
       height: 3rem;
       margin-left: 1rem;
       border: 1px solid #E59F71;
       border-radius: 5px;
+      cursor: pointer; }
+    .navigation__user-profile .user-menuBadge {
+      position: absolute;
+      top: -7px;
+      right: -7px;
+      display: inline-block;
+      text-align: center;
+      min-width: 20px;
+      min-height: 20px;
+      border-radius: 50%;
+      background-color: #BA5A31;
+      color: #E1E4D9;
       cursor: pointer; }
   .navigation__mobile {
     display: none;
